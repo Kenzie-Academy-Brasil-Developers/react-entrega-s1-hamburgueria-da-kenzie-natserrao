@@ -1,13 +1,17 @@
 import { StyledTotal } from "./style";
 
-export const CardTotal = () => {
+export const CardTotal = ({ totalPrice, setCurrentSale }) => {
+  function removeAll() {
+    setCurrentSale([]);
+  }
+
   return (
     <StyledTotal>
-      <div>
-        <p>Total</p>
-        <span>R$</span>
+      <div className="div-total">
+        <p>Total:</p>
+        <span>R${totalPrice}</span>
       </div>
-      <button>Remover todos</button>
+      <button onClick={removeAll}>Remover todos</button>
     </StyledTotal>
   );
 };

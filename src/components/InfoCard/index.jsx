@@ -1,8 +1,8 @@
 import { InfoDiv } from "./style";
 
-export const InfoCard = ({ currentSale }) => {
+export const InfoCard = () => {
   return (
-    <InfoDiv currentSale={currentSale}>
+    <InfoDiv>
       <p>Sua sacola está vazia</p>
       <span>Adicione itens</span>
     </InfoDiv>

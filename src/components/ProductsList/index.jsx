@@ -3,9 +3,9 @@ import { Products } from "../Products";
 import { StyledUl } from "./style";
 import { Div } from "./style";
 import { useState } from "react";
-import { InfoCard } from "../InfoCard";
+import { toast } from "react-toastify";
 
-export const ProductsList = ({ products }) => {
+export const ProductsList = ({ products, filteredProducts, busca }) => {
   const [currentSale, setCurrentSale] = useState([]);
 
   function handleClick(productId) {
@@ -18,25 +18,37 @@ export const ProductsList = ({ products }) => {
       category: productAdd.category,
       img: productAdd.img,
     };
-    setCurrentSale([...currentSale, newProduct]);
+    if (currentSale.find((elem) => elem.id === productId)) {
+      toast.warning("O produto já está no carrinho");
+    } else {
+      setCurrentSale([...currentSale, newProduct]);
+    }
   }
-  console.log(currentSale);
 
   return (
     <Div>
       <StyledUl>
-        {products.map((product) => (
-          <Products
-            key={product.id}
-            name={product.name}
-            img={product.img}
-            category={product.category}
-            price={product.price}
-            handleClick={() => handleClick(product.id)}
-          />
-        ))}
+        <div>
+          {filteredProducts.length > 0 && (
+            <h2 className="titleSearch">
+              Resultados para: <span>{busca}</span>
+            </h2>
+          )}
+        </div>
+        {(filteredProducts.length > 0 ? filteredProducts : products).map(
+          (product) => (
+            <Products
+              key={product.id}
+              name={product.name}
+              img={product.img}
+              category={product.category}
+              price={product.price}
+              handleClick={() => handleClick(product.id)}
+            />
+          )
+        )}
       </StyledUl>
-      <Cart currentSale={currentSale} />
+      <Cart currentSale={currentSale} setCurrentSale={setCurrentSale} />
     </Div>
   );
 };

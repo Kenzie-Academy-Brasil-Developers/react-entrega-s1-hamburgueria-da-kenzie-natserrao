@@ -35,16 +35,27 @@ export const StyledHeader = styled.header`
       width: 21rem;
     }
   }
+  .containerSearch:focus-within {
+    border: 2px solid var(--Grey100);
+  }
+
+  form {
+    width: 100%;
+  }
 
   input {
     border: none;
     width: 60%;
+    padding: 0 1rem;
   }
   input::placeholder {
     font-family: var(--font-family);
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 40s0;
     color: var(--Grey20);
+  }
+  input:focus {
+    outline: 0;
   }
 
   button {
@@ -55,7 +66,7 @@ export const StyledHeader = styled.header`
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--White);
-    width: 35%;
+    width: 38%;
     height: 2.5rem;
   }
   button:hover {

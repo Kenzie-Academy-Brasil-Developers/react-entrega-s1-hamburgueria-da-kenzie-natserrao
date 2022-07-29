@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const InfoDiv = styled.div`
-  display: ${({ currentSale }) => (currentSale.length > 0 ? "none" : "flex")};
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;

@@ -1,4 +1,4 @@
-export const CardProduct = ({ img, name, category }) => {
+export const CardProduct = ({ img, name, category, handleRemove }) => {
   return (
     <>
       <img src={img} alt="Foto Produto" />
@@ -6,7 +6,9 @@ export const CardProduct = ({ img, name, category }) => {
         <p>{name}</p>
         <span>{category}</span>
       </div>
-      <button className="btn-cart">Remover</button>
+      <button onClick={handleRemove} className="btn-cart">
+        Remover
+      </button>
     </>
   );
 };

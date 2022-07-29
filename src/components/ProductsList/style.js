@@ -34,6 +34,7 @@ export const StyledUl = styled.ul`
     flex-wrap: wrap;
     gap: 1.5rem;
     margin-left: 2rem;
+    padding: 1.5rem;
   }
 
   @media (min-width: 1025px) and (max-width: 1280px) {
@@ -42,9 +43,22 @@ export const StyledUl = styled.ul`
     flex-wrap: wrap;
     gap: 1.5rem;
     margin: 0;
+    padding: 1.5rem;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 50vw;
     flex-wrap: wrap;
+    padding: 1.5rem;
+  }
+
+  .titleSearch {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--Grey100);
+
+    span {
+      color: #828282;
+    }
   }
 `;

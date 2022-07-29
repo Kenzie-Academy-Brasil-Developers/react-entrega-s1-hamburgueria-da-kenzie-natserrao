@@ -59,9 +59,10 @@ export const StyledAside = styled.aside`
     align-items: center;
     justify-content: center;
     background-color: var(--Grey0);
-    height: 15rem;
+    height: auto;
     border-radius: 0px 0px 5px 5px;
     gap: 1rem;
+    min-height: 180px;
 
     @media (min-width: 1281px) {
       width: 25vw;
@@ -74,6 +75,12 @@ export const StyledAside = styled.aside`
     }
     @media (min-width: 768px) and (max-width: 900px) {
       width: 45vw;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.2rem 0;
     }
 
     .lista-cart {

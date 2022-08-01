@@ -9,6 +9,16 @@ export const StyledHeader = styled.header`
     gap: 1.5rem;
     width: 95vw;
 
+    @media (min-width: 1281px) {
+      width: 100vw;
+    }
+    @media (min-width: 1025px) and (max-width: 1280px) {
+      width: 100vw;
+    }
+    @media (min-width: 768px) and (max-width: 899px) {
+      width: 100vw;
+    }
+
     @media (min-width: 600px) {
       flex-direction: row;
       justify-content: space-between;

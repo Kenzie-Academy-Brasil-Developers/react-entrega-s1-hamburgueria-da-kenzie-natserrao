@@ -10,6 +10,7 @@ export const StyledLi = styled.li`
   transition: ease-in-out 0.1s;
   gap: 16px;
   width: 100vw;
+  max-width: 100vw;
   border: 2px solid #e0e0e0;
   border-radius: 8px;
 
@@ -19,22 +20,27 @@ export const StyledLi = styled.li`
 
   @media (min-width: 1281px) {
     width: 18.5vw;
+    max-width: 18.5vw;
   }
   @media (min-width: 1025px) and (max-width: 1280px) {
     width: 21vw;
+    max-width: 21vw;
   }
   @media (min-width: 901px) and (max-width: 1024px) {
-    width: 21vw;
+    width: 40vw;
+    max-width: 40vw;
   }
   @media (min-width: 768px) and (max-width: 900px) {
     width: 40vw;
+    max-width: 40vw;
   }
   @media (min-width: 481px) and (max-width: 767px) {
-    width: 40vw;
+    width: 50vw;
+    max-width: 50vw;
   }
 
   div {
-    width: 60vw;
+    width: 70vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,18 +50,23 @@ export const StyledLi = styled.li`
 
     @media (min-width: 1281px) {
       width: 18.2vw;
+      max-width: 18.2vw;
     }
     @media (min-width: 1025px) and (max-width: 1280px) {
       width: 20.7vw;
+      max-width: 20.7vw;
     }
-    @media (min-width: 901px) and (max-width: 1024px) {
-      width: 20.5vw;
+    @media (min-width: 900px) and (max-width: 1024px) {
+      width: 39vw;
+      max-width: 40vw;
     }
     @media (min-width: 768px) and (max-width: 899px) {
       width: 39.5vw;
+      max-width: 40vw;
     }
     @media (min-width: 481px) and (max-width: 767px) {
-      width: 38vw;
+      width: 47vw;
+      max-width: 48vw;
     }
   }
 

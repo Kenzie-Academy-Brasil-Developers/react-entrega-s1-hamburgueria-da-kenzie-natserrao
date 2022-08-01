@@ -13,7 +13,18 @@ export const Div = styled.div`
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    flex-direction: row;
+    flex-direction: column;
+  }
+
+  .titleSearch {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--Grey100);
+
+    span {
+      color: #828282;
+    }
   }
 `;
 
@@ -46,19 +57,9 @@ export const StyledUl = styled.ul`
     padding: 1.5rem;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
-    width: 50vw;
-    flex-wrap: wrap;
+    width: 100vw;
+    flex-direction: row;
+    flex-wrap: nowrap;
     padding: 1.5rem;
-  }
-
-  .titleSearch {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--Grey100);
-
-    span {
-      color: #828282;
-    }
   }
 `;

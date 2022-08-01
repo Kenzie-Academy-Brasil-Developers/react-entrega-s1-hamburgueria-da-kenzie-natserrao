@@ -20,10 +20,10 @@ export const StyledTotal = styled.div`
     width: 30vw;
   }
   @media (min-width: 901px) and (max-width: 1024px) {
-    width: 38vw;
+    width: 90vw;
   }
   @media (min-width: 768px) and (max-width: 900px) {
-    width: 45vw;
+    width: 90vw;
   }
 
   .div-total {
@@ -41,11 +41,11 @@ export const StyledTotal = styled.div`
       width: 28vw;
     }
     @media (min-width: 901px) and (max-width: 1024px) {
-      width: 36vw;
+      width: 80vw;
     }
 
     @media (min-width: 768px) and (max-width: 900px) {
-      width: 37vw;
+      width: 80vw;
     }
 
     p {
@@ -80,10 +80,10 @@ export const StyledTotal = styled.div`
       width: 28vw;
     }
     @media (min-width: 901px) and (max-width: 1024px) {
-      width: 34vw;
+      width: 80vw;
     }
     @media (min-width: 768px) and (max-width: 900px) {
-      width: 38vw;
+      width: 80vw;
     }
   }
 

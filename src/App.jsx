@@ -10,15 +10,28 @@ function App() {
   const [products, setProducts] = useState([]);
   const [busca, setBusca] = useState("");
   const [filteredProduct, setFilteredProduct] = useState([]);
+  const [activeSearch, setActiveSearch] = useState(false);
 
   function showProducts(e) {
     e.preventDefault();
+    const buscaTratada = busca.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
     const newFilter = products.filter(
       (product) =>
-        product.name.toLowerCase().match(busca) ||
-        product.category.toLowerCase().match(busca)
+        product.name
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .includes(buscaTratada) ||
+        product.category
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .includes(buscaTratada)
     );
+
     setFilteredProduct(newFilter);
+    setActiveSearch(true);
   }
 
   useEffect(() => {
@@ -36,6 +49,7 @@ function App() {
         products={products}
         filteredProducts={filteredProduct}
         busca={busca}
+        activeSearch={activeSearch}
       />
     </div>
   );

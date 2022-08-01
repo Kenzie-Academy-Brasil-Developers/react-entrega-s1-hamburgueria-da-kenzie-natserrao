@@ -43,7 +43,7 @@ export const GlobalStyle = createGlobalStyle`
         width: 100vw;
         height: 100%;
         margin-bottom: 2rem;
-
+        
 @media (min-width: 1281px) {
     overflow-x: hidden;
   }

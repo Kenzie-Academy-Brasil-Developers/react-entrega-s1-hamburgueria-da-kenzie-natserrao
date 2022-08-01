@@ -15,12 +15,11 @@ export const StyledAside = styled.aside`
     width: 30vw;
   }
   @media (min-width: 901px) and (max-width: 1024px) {
-    width: 38vw;
+    width: 100vw;
   }
 
   @media (min-width: 768px) and (max-width: 900px) {
-    width: 45vw;
-    margin-right: 1.5rem;
+    width: 100vw;
   }
 
   .title {
@@ -37,11 +36,11 @@ export const StyledAside = styled.aside`
       width: 30vw;
     }
     @media (min-width: 901px) and (max-width: 1024px) {
-      width: 38vw;
+      width: 90vw;
     }
 
     @media (min-width: 768px) and (max-width: 900px) {
-      width: 45vw;
+      width: 90vw;
     }
   }
   .title-paragraph {
@@ -71,10 +70,10 @@ export const StyledAside = styled.aside`
       width: 30vw;
     }
     @media (min-width: 901px) and (max-width: 1024px) {
-      width: 38vw;
+      width: 90vw;
     }
     @media (min-width: 768px) and (max-width: 900px) {
-      width: 45vw;
+      width: 90vw;
     }
     ul {
       display: flex;
@@ -147,7 +146,7 @@ export const StyledAside = styled.aside`
     }
     @media (min-width: 901px) and (max-width: 1024px) {
       .lista-cart {
-        width: 32vw;
+        width: 80vw;
         img {
           width: 8vw;
         }
@@ -156,7 +155,7 @@ export const StyledAside = styled.aside`
 
     @media (min-width: 768px) and (max-width: 900px) {
       .lista-cart {
-        width: 38vw;
+        width: 80vw;
         img {
           width: 8.5vw;
         }
